@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>acto works｜訪問介護・福祉事業者のためのWeb制作会社</title>
+  <meta name="description" content="訪問介護・福祉事業者専門のホームページ制作。集客と採用につながるサイトを、文章作成から運用までワンストップで。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 背景の装飾（薄いグリッド＋光のぼかし） -->
+  <div class="bg-decor" aria-hidden="true">
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow--cyan"></div>
+    <div class="bg-glow bg-glow--purple"></div>
+    <div class="bg-glow bg-glow--blue"></div>
+  </div>
+
+  <!-- ===================== 共通ヘッダー ===================== -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">acto&nbsp;<span>works</span></a>
+      <button class="nav-toggle" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+      <nav class="nav">
+        <a href="index.html" class="is-current">ホーム</a>
+        <a href="service.html">サービス</a>
+        <a href="reasons.html">選ばれる理由</a>
+        <a href="flow.html">制作の流れ</a>
+        <a href="price.html">料金</a>
+        <a href="faq.html">よくある質問</a>
+      </nav>
+      <a href="contact.html" class="btn btn--grad btn--small">無料相談</a>
+    </div>
+  </header>
+
+  <!-- ===================== 1. ヒーロー ===================== -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__text fade-in">
+        <span class="badge">訪問介護・福祉事業者専門のWeb制作</span>
+        <h1 class="hero__title">“伝わる”ホームページで、<br><span class="grad-text">問い合わせと採用</span>を伸ばす。</h1>
+        <p class="hero__desc">ITが苦手でも大丈夫。最新のデザインと技術で、小さな事業所の魅力をしっかり届けます。文章づくりから公開後の運用まで、私たちが伴走します。</p>
+        <div class="hero__buttons">
+          <a href="contact.html" class="btn btn--grad">無料で相談する</a>
+          <a href="service.html" class="btn btn--ghost">サービスを見る</a>
+        </div>
+      </div>
+
+      <div class="hero__visual fade-in">
+        <!-- 【ヒーローの写真】介護・相談・サポートを感じる写真。差し替え時は src を変更 -->
+        <img class="hero__photo" src="https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=1100&q=80" alt="利用者の相談にやさしく対応するスタッフ">
+        <!-- 重ねるダッシュボード風カード（装飾） -->
+        <div class="mock-card mock-card--dash glass float-1" aria-hidden="true">
+          <div class="mock-card__head"><span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span><span class="mock-card__url">yoursite.care</span></div>
+          <div class="mock-card__body">
+            <div class="mock-bar"><span style="width:78%"></span></div>
+            <div class="mock-row"><div class="mock-kpi"><small>問い合わせ</small><strong>+182%</strong></div><div class="mock-kpi"><small>応募数</small><strong>+64%</strong></div></div>
+            <div class="mock-graph"><span style="height:40%"></span><span style="height:60%"></span><span style="height:48%"></span><span style="height:80%"></span><span style="height:68%"></span><span style="height:95%"></span></div>
+          </div>
+        </div>
+        <!-- 重ねるスマホ風カード（装飾） -->
+        <div class="mock-card mock-card--phone glass float-2" aria-hidden="true">
+          <div class="mock-phone__bar"></div><div class="mock-phone__hero"></div><div class="mock-phone__line"></div><div class="mock-phone__line short"></div><div class="mock-phone__btn">お問い合わせ</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 信頼バー ===================== -->
+  <div class="trustbar">
+    <div class="container trustbar__inner">
+      <span>対応サービス</span>
+      <ul><li>訪問介護</li><li>居宅介護支援</li><li>デイサービス</li><li>訪問看護</li><li>障がい福祉</li><li>採用サイト</li></ul>
+    </div>
+  </div>
+
+  <!-- ===================== デザイン例の無限スクロール（マーキー） ===================== -->
+  <!-- マウスを乗せると一時停止します。2セット並べて途切れずループ。差し替え時は src を変更 -->
+  <section class="marquee-section">
+    <div class="container">
+      <p class="eyebrow fade-in">DESIGN SAMPLES</p>
+      <h2 class="section__title fade-in">acto worksがつくるデザイン例</h2>
+      <p class="section__subtitle fade-in">介護・福祉の現場にあわせた、清潔感と信頼感のあるデザインを得意としています。</p>
+    </div>
+    <div class="marquee">
+      <div class="marquee__track">
+        <figure class="sample"><img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=600&q=80" alt="制作デザイン例：コーポレートサイト"></figure>
+        <figure class="sample"><img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=600&q=80" alt="制作デザイン例：PCに表示したサイト画面"></figure>
+        <figure class="sample"><img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=600&q=80" alt="制作デザイン例：UIデザイン"></figure>
+        <figure class="sample"><img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=600&q=80" alt="制作デザイン例：ノートPCの画面"></figure>
+        <figure class="sample"><img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?auto=format&fit=crop&w=600&q=80" alt="制作デザイン例：スマホ表示"></figure>
+        <figure class="sample"><img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=600&q=80" alt="制作デザイン例：アプリUI"></figure>
+        <figure class="sample" aria-hidden="true"><img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=600&q=80" alt=""></figure>
+        <figure class="sample" aria-hidden="true"><img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=600&q=80" alt=""></figure>
+        <figure class="sample" aria-hidden="true"><img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=600&q=80" alt=""></figure>
+        <figure class="sample" aria-hidden="true"><img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=600&q=80" alt=""></figure>
+        <figure class="sample" aria-hidden="true"><img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?auto=format&fit=crop&w=600&q=80" alt=""></figure>
+        <figure class="sample" aria-hidden="true"><img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=600&q=80" alt=""></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 2. お悩みセクション ===================== -->
+  <section class="troubles section">
+    <div class="container">
+      <p class="eyebrow fade-in">ISSUES</p>
+      <h2 class="section__title fade-in">こんなお悩み、<br class="sp-br">ありませんか？</h2>
+      <p class="lead-block fade-in">ホームページは「あったほうがいいのは分かっているけれど、何から手をつければいいか分からない」——訪問介護・福祉の事業者さまから、私たちが最もよくお聞きする声です。下のようなお悩みに、ひとつでも心当たりがあれば、acto worksがお力になれます。</p>
+      <div class="troubles__grid">
+        <div class="card glass trouble fade-zoom"><span class="trouble__no">01</span><p>そもそもホームページを持っていない。名刺やチラシだけで、ネットで検索しても出てこない。</p></div>
+        <div class="card glass trouble fade-zoom"><span class="trouble__no">02</span><p>求人を出しても人が集まらない。求職者に職場の雰囲気や想いが伝わっていない。</p></div>
+        <div class="card glass trouble fade-zoom"><span class="trouble__no">03</span><p>問い合わせが少なく利用者が増えない。ご家族が安心して選べる情報が足りていない。</p></div>
+        <div class="card glass trouble fade-zoom"><span class="trouble__no">04</span><p>何を載せればいいか分からない。古いサイトのまま、更新の仕方も分からず放置している。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 各ページへの誘導 ===================== -->
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow fade-in">WHAT WE DO</p>
+      <h2 class="section__title fade-in">私たちにできること</h2>
+      <p class="lead-block fade-in">acto works（アクトワークス）は、訪問介護・福祉事業者さま専門のホームページ制作チームです。デザインや技術はもちろん、文章づくりや写真選び、公開後の更新まで、Webにまつわる「分からない」をまるごと引き受けます。難しい専門用語は使いません。まるで近所の相談相手のように、気軽に声をかけてください。</p>
+      <div class="next-links">
+        <a href="service.html" class="card glass next-link fade-zoom"><h3>サービス内容</h3><p>ホームページ制作・スマホ対応・問い合わせフォーム・求人ページ・文章作成・公開後の運用サポートまで、必要なものをまるごと。</p><span class="arrow">詳しく見る →</span></a>
+        <a href="reasons.html" class="card glass next-link fade-zoom"><h3>選ばれる理由</h3><p>専門知識がなくても相談しやすく、文章作成からサポート。明朗な料金で、公開後もずっと伴走する4つの理由。</p><span class="arrow">詳しく見る →</span></a>
+        <a href="flow.html" class="card glass next-link fade-zoom"><h3>制作の流れ</h3><p>相談・ヒアリング・制作・確認修正・公開・運用サポートの6ステップ。はじめての方でも迷わず進められます。</p><span class="arrow">詳しく見る →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 制作サンプル（写真つき） ===================== -->
+  <section class="works section">
+    <div class="container">
+      <p class="eyebrow fade-in">WORKS</p>
+      <h2 class="section__title fade-in">制作サンプル</h2>
+      <p class="section__subtitle fade-in">「こんなサイトが作れます」という制作サンプルです。カードをクリックすると、実物をご覧いただけます。</p>
+      <div class="works__grid">
+        <!-- ▼ href="..." を、GitHub PagesやデモサイトのURLに差し替えてください。target="_blank"で別タブで開きます -->
+        <a class="work-card glass fade-zoom" href="#" target="_blank" rel="noopener">
+          <!-- 【サンプルの写真①】差し替え時は src を変更 -->
+          <img class="work-card__img" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80" alt="訪問介護事業所サイトの制作サンプル">
+          <div class="work-card__body"><span class="tag">訪問介護</span><h3>訪問介護事業所サイト</h3><p>サービス内容・料金・アクセスを分かりやすくまとめた、訪問介護向けサイトのサンプルです。</p><span class="arrow">サイトを見る →</span></div>
+        </a>
+        <a class="work-card glass fade-zoom" href="#" target="_blank" rel="noopener">
+          <!-- 【サンプルの写真②】差し替え時は src を変更 -->
+          <img class="work-card__img" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=900&q=80" alt="採用サイトの制作サンプル">
+          <div class="work-card__body"><span class="tag">採用サイト</span><h3>採用・求人サイト</h3><p>職場の雰囲気が伝わるスタッフ紹介や、募集要項を見やすく掲載した採用ページのサンプルです。</p><span class="arrow">サイトを見る →</span></div>
+        </a>
+        <a class="work-card glass fade-zoom" href="#" target="_blank" rel="noopener">
+          <!-- 【サンプルの写真③】差し替え時は src を変更 -->
+          <img class="work-card__img" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=80" alt="デイサービスサイトの制作サンプル">
+          <div class="work-card__body"><span class="tag">デイサービス</span><h3>デイサービスサイト</h3><p>見学予約への導線を意識した構成の、デイサービス向けサイトのサンプルです。</p><span class="arrow">サイトを見る →</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="cta section">
+    <div class="container">
+      <div class="cta__box glass fade-in">
+        <!-- 【CTAの写真】打ち合わせ・サポートを感じる写真。差し替え時は src を変更 -->
+        <img class="cta__photo" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1000&q=80" alt="オンラインで相談に応じる担当者">
+        <div class="cta__text">
+          <h2 class="cta__title">まずは、お話を<br>聞かせてください</h2>
+          <p class="cta__desc">「何から始めればいいか分からない」段階で大丈夫。相談は無料です。</p>
+          <a href="contact.html" class="btn btn--grad">無料で相談する</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 共通フッター ===================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <p class="footer__logo">acto&nbsp;<span>works</span></p>
+        <p class="footer__tag">訪問介護・福祉事業者のためのWeb制作</p>
+      </div>
+      <p class="footer__copy">© 2026 acto works. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- スクロール進捗バー／追従CTA -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+    <span class="sticky-cta__text">まずは無料でご相談ください。お見積りは無料です。</span>
+    <a href="contact.html" class="btn btn--grad btn--small">無料相談する</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
