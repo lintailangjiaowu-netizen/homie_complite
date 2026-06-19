@@ -1,5 +1,5 @@
 /* =========================================================
-   acto works（アクトワークス）― script.js
+   Acto Works（アクトワークス）― script.js
    初心者の方でも分かるよう、各処理にコメントを入れています。
    ========================================================= */
 
@@ -165,7 +165,14 @@ document.addEventListener("DOMContentLoaded", function () {
 function handleSubmit(event) {
   event.preventDefault();
   const note = document.getElementById("formNote");
-  note.textContent = "送信ありがとうございます。担当者より1〜2営業日以内にご連絡します。";
+
+  // 迷惑メール（ボット）対策：おとり項目(_gotcha)が入力されていたら、人ではないので送信しない
+  var trap = event.target.querySelector('input[name="_gotcha"]');
+  if (trap && trap.value !== "") {
+    return false; // 何もせず無効化
+  }
+
+  note.textContent = "送信ありがとうございます。担当者より1営業日以内にご連絡します。";
   event.target.reset();
   return false;
 }

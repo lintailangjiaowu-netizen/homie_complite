@@ -1,5 +1,5 @@
 /* =========================================================
-   acto works（アクトワークス）― 訪問介護・福祉事業者向け Web制作
+   Acto Works（アクトワークス）― 訪問介護・福祉事業者向け Web制作
    テック／SaaS風デザイン
    ・ダークネイビー基調 ＋ シアン・ブルー・パープルのアクセント
    ・色を変えたいときは下の :root を編集してください
@@ -357,7 +357,7 @@ html.js .fade-in-right { transform: translateX(40px); }
 .is-visible { opacity: 1 !important; transform: none !important; }
 
 /* =========================================================
-   acto works 追加パーツ（情報量・写真・アニメーション強化）
+   Acto Works 追加パーツ（情報量・写真・アニメーション強化）
    ========================================================= */
 
 /* ---------- 見出しグラデーションのキラッと光るアニメ ---------- */
@@ -464,6 +464,9 @@ html.js .fade-zoom { opacity: 0; transform: scale(0.92); transition: opacity 0.7
 a.work-card { text-decoration: none; color: inherit; display: block; }
 .work-card__body .arrow { color: var(--cyan); font-weight: 700; margin-top: 12px; display: inline-block; }
 
+/* 制作サンプル：中身が空の「枠だけ」カード */
+.work-card--empty { min-height: 360px; }
+
 /* =========================================================
    ★ スマホ・タブレット対応（メインのレスポンシブ指定）
    ※ 以前の編集トラブルで欠落していたため再追加
@@ -474,6 +477,7 @@ a.work-card { text-decoration: none; color: inherit; display: block; }
   .hero__visual { margin-top: 30px; }
   .about__inner { grid-template-columns: 1fr; gap: 60px; }
   .service__feature { grid-template-columns: 1fr; }
+  .troubles__grid { grid-template-columns: repeat(2, 1fr); }
   .service__grid { grid-template-columns: repeat(2, 1fr); }
   .works__grid { grid-template-columns: repeat(2, 1fr); }
   .flow__grid { grid-template-columns: repeat(2, 1fr); }
@@ -516,4 +520,45 @@ a.work-card { text-decoration: none; color: inherit; display: block; }
   .mock-card--dash { left: -10px; bottom: -20px; }
   .mock-card--phone { right: 0; }
   .page-hero h1 { font-size: 1.9rem; }
+}
+
+/* =========================================================
+   追加パーツ：ヒーロー料金タグ・他社料金比較表・迷惑メール対策
+   ========================================================= */
+
+/* ヒーローの写真に重ねる「料金タグ」 */
+.hero__pricetag {
+  position: absolute; bottom: -24px; left: -24px;
+  border-radius: 16px; padding: 16px 20px; min-width: 220px;
+}
+.hero__pricetag-label {
+  display: inline-block; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em;
+  background: var(--grad); color: #06121f; padding: 3px 12px; border-radius: 999px; margin-bottom: 12px;
+}
+.hero__pricetag-row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-top: 6px; }
+.hero__pricetag-row span { color: var(--text-dim); font-size: 0.9rem; }
+.hero__pricetag-row strong { font-size: 1.25rem; font-weight: 800;
+  background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+/* 他社との料金比較テーブル */
+.compare-wrap { overflow-x: auto; border-radius: var(--radius); }
+.compare { width: 100%; border-collapse: collapse; min-width: 640px; background: rgba(255,255,255,0.02); }
+.compare th, .compare td { padding: 16px 18px; text-align: center; border-bottom: 1px solid var(--line); font-size: 0.95rem; }
+.compare thead th { font-weight: 800; color: var(--text); background: rgba(255,255,255,0.04); }
+.compare tbody td:first-child, .compare thead th:first-child { text-align: left; color: var(--text-dim); }
+.compare .hot { background: rgba(34,211,238,0.10); color: var(--cyan); font-weight: 800; }
+.compare thead th.hot { color: var(--cyan); border-bottom: 2px solid var(--cyan); }
+.compare tbody tr:last-child td { border-bottom: none; }
+
+/* お問い合わせ：電話番号を2件きれいに並べる */
+.info-card strong + strong { margin-top: 2px; }
+
+/* 迷惑メール（ボット）対策のおとり項目は完全に隠す */
+.hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+
+/* 迷惑メール対策の案内文 */
+.contact__spamnote { margin-top: 18px; color: var(--text-dim); font-size: 0.82rem; text-align: center; line-height: 1.7; }
+
+@media (max-width: 640px) {
+  .hero__pricetag { position: static; margin: 18px auto 0; left: auto; bottom: auto; width: 100%; }
 }
