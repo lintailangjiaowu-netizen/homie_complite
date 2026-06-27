@@ -188,6 +188,9 @@ a { color: inherit; }
 .trustbar span { color: var(--text-dim); font-size: 0.82rem; letter-spacing: 0.1em; }
 .trustbar ul { list-style: none; display: flex; gap: 14px 26px; flex-wrap: wrap; }
 .trustbar li { color: var(--text); font-weight: 700; opacity: 0.7; font-size: 0.95rem; }
+/* 対応サービス：クリックでサンプルLPへ */
+.trustbar li a { color: inherit; text-decoration: none; transition: color 0.2s, opacity 0.2s; }
+.trustbar li a:hover { color: var(--cyan); opacity: 1; text-decoration: underline; }
 
 /* ---------- 2. お悩み ---------- */
 .troubles__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }

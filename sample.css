@@ -1,0 +1,104 @@
+/* =========================================================
+   Acto Works 制作サンプルLP 共通スタイル（sample.css）
+   各業種のサンプルLPで共通利用。やさしく清潔感のあるデザイン。
+   ・アクセント色は各HTMLの <body style="--accent:..."> で業種ごとに変えられます
+   ========================================================= */
+
+:root {
+  --accent: #2f9e8f;          /* 既定のアクセント（業種ごとにHTML側で上書き可） */
+  --accent-deep: #248072;
+  --bg: #ffffff;
+  --bg-soft: #f7f5f0;         /* やわらかいベージュ */
+  --text: #33312e;
+  --text-sub: #6f6a63;
+  --line: #e8e3da;
+  --radius: 18px;
+  --shadow: 0 10px 30px rgba(80,70,50,0.10);
+  --max: 1080px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+  color: var(--text); background: var(--bg); line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+.container { width: 90%; max-width: var(--max); margin: 0 auto; }
+.section { padding: 72px 0; }
+.section--soft { background: var(--bg-soft); }
+.sec-title { font-size: 1.9rem; text-align: center; margin-bottom: 10px; }
+.sec-sub { text-align: center; color: var(--text-sub); margin-bottom: 44px; }
+
+/* 上部の「制作サンプル」案内バー */
+.samplebar {
+  background: var(--text); color: #fff; font-size: 0.84rem; text-align: center; padding: 8px 12px;
+}
+.samplebar a { color: #fff; font-weight: 700; text-decoration: underline; }
+
+/* ボタン */
+.btn {
+  display: inline-block; background: var(--accent); color: #fff; font-weight: 700;
+  padding: 15px 34px; border-radius: 999px; text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12); transition: transform .25s, background .25s, box-shadow .25s;
+}
+.btn:hover { background: var(--accent-deep); transform: translateY(-3px); box-shadow: 0 14px 28px rgba(0,0,0,0.18); }
+
+/* ヘッダー */
+.head { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.92); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
+.head__in { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+.head__name { font-weight: 800; font-size: 1.1rem; color: var(--accent-deep); }
+.head .btn { padding: 9px 18px; font-size: .9rem; }
+
+/* ヒーロー */
+.hero { position: relative; min-height: 64vh; display: flex; align-items: center;
+  background-size: cover; background-position: center; padding: 70px 0; }
+.hero__box { max-width: 560px; background: rgba(255,255,255,0.86); padding: 36px; border-radius: var(--radius); box-shadow: var(--shadow); }
+.hero__tag { display: inline-block; background: var(--accent); color: #fff; font-size: .8rem; font-weight: 700; padding: 5px 14px; border-radius: 999px; margin-bottom: 14px; }
+.hero__title { font-size: 2.1rem; line-height: 1.45; margin-bottom: 16px; }
+.hero__lead { color: var(--text-sub); margin-bottom: 24px; }
+
+/* カードグリッド */
+.grid { display: grid; gap: 20px; }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+.card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow); }
+.card h3 { font-size: 1.12rem; margin-bottom: 8px; color: var(--accent-deep); }
+.card p { color: var(--text-sub); font-size: .95rem; }
+.card__no { display: inline-flex; width: 38px; height: 38px; border-radius: 50%; background: var(--accent); color: #fff; align-items: center; justify-content: center; font-weight: 800; margin-bottom: 12px; }
+
+/* 写真つき2カラム */
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.split img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); }
+.split h2 { font-size: 1.7rem; margin-bottom: 14px; }
+.split p { color: var(--text-sub); margin-bottom: 12px; }
+
+/* CTA */
+.cta { text-align: center; background: var(--accent); color: #fff; padding: 70px 0; }
+.cta h2 { font-size: 1.8rem; margin-bottom: 12px; }
+.cta p { margin-bottom: 26px; }
+.cta .btn { background: #fff; color: var(--accent-deep); }
+.cta .btn:hover { background: var(--bg-soft); }
+
+/* お問い合わせ簡易 */
+.contact-box { max-width: 640px; margin: 0 auto; text-align: center; }
+.contact-box .info { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 18px; color: var(--text-sub); }
+.contact-box .info strong { display: block; color: var(--text); font-size: 1.1rem; }
+
+/* フッター */
+.foot { background: var(--bg-soft); text-align: center; padding: 30px 0; color: var(--text-sub); font-size: .85rem; }
+.foot a { color: var(--accent-deep); font-weight: 700; }
+
+/* レスポンシブ */
+@media (max-width: 860px) {
+  .grid--3, .grid--4 { grid-template-columns: repeat(2, 1fr); }
+  .split { grid-template-columns: 1fr; gap: 24px; }
+}
+@media (max-width: 560px) {
+  .grid--3, .grid--4 { grid-template-columns: 1fr; }
+  .hero__title { font-size: 1.7rem; }
+  .hero__box { padding: 24px; }
+  .section { padding: 54px 0; }
+}
